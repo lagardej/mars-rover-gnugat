@@ -2,7 +2,8 @@
 
 namespace spec\MarsRover\Navigation;
 
-use MarsRover\Navigation\Orientation;
+use MarsRover\Geolocation\Location;
+use MarsRover\Geolocation\Orientation;
 use PhpSpec\ObjectBehavior;
 
 class LandRoverSpec extends ObjectBehavior
@@ -11,7 +12,7 @@ class LandRoverSpec extends ObjectBehavior
     const Y = 42;
     const ORIENTATION = Orientation::NORTH;
 
-    function it_has_coordinates()
+    function it_has_location()
     {
         $this->beConstructedWith(
             self::X,
@@ -19,19 +20,11 @@ class LandRoverSpec extends ObjectBehavior
             self::ORIENTATION
         );
 
-        $coordinates = $this->getCoordinates();
+        $location = $this->getLocation();
+        $location->shouldHaveType(Location::class);
+        $coordinates = $location->getCoordinates();
         $coordinates->getX()->shouldBe(self::X);
         $coordinates->getY()->shouldBe(self::Y);
-    }
-
-    function it_has_an_orientation()
-    {
-        $this->beConstructedWith(
-            self::X,
-            self::Y,
-            self::ORIENTATION
-        );
-
-        $this->getOrientation()->get()->shouldBe(self::ORIENTATION);
+        $location->getOrientation()->get()->shouldBe(self::ORIENTATION);
     }
 }

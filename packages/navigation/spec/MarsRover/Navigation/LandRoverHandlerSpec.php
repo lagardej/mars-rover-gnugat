@@ -7,7 +7,7 @@ use MarsRover\EventSourcing\Event;
 use MarsRover\Navigation\Events;
 use MarsRover\EventSourcing\EventStore;
 use MarsRover\Navigation\LandRover;
-use MarsRover\Navigation\Orientation;
+use MarsRover\Geolocation\Orientation;
 use PhpSpec\ObjectBehavior;
 
 class LandRoverHandlerSpec extends ObjectBehavior
@@ -29,7 +29,7 @@ class LandRoverHandlerSpec extends ObjectBehavior
         EventStore $eventStore
     )
     {
-        $this->beConstructedWith($anEventHappened, $eventStore);
+        $this->beConstructedwith($anEventHappened, $eventStore);
         $landRover = new LandRover(
             self::X,
             self::Y,

@@ -2,24 +2,26 @@
 
 namespace MarsRover\Navigation;
 
+use MarsRover\Geolocation\{
+    Coordinates,
+    Location,
+    Orientation
+};
+
 class LandRover
 {
-    private $coordinates;
-    private $orientation;
+    private $location;
 
     public function __construct($x, $y, $orientation)
     {
-        $this->coordinates = new Coordinates($x, $y);
-        $this->orientation = new Orientation($orientation);
+        $this->location = new Location(
+            new Coordinates($x, $y),
+            new Orientation($orientation)
+        );
     }
 
-    public function getCoordinates() : Coordinates
+    public function getLocation(): Location
     {
-        return $this->coordinates;
-    }
-
-    public function getOrientation() : Orientation
-    {
-        return $this->orientation;
+        return $this->location;
     }
 }
