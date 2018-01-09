@@ -1,0 +1,17 @@
+{
+    "name": "mars-rover/location",
+    "license": "MIT",
+    "type": "library",
+    "description": "Mars Rover - Location",
+    "autoload": {
+        "psr-4": {
+            "MarsRover\\Location\\": "src/MarsRover/Location"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "memio/spec-gen": "^0.8.3"
+    }
+}
