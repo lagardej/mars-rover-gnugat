@@ -2,13 +2,14 @@
 
 namespace spec\MarsRover\Navigation;
 
+use MarsRover\Navigation\Orientation;
 use PhpSpec\ObjectBehavior;
 
 class LandRoverSpec extends ObjectBehavior
 {
     const X = 23;
     const Y = 42;
-    const ORIENTATION = 'north';
+    const ORIENTATION = Orientation::NORTH;
 
     function it_has_coordinates()
     {
@@ -31,19 +32,6 @@ class LandRoverSpec extends ObjectBehavior
             self::ORIENTATION
         );
 
-        $this->getOrientation()->shouldBe(self::ORIENTATION);
-    }
-
-    function it_cannot_have_a_non_cardinal_orientation()
-    {
-        $this->beConstructedWith(
-            self::X,
-            self::Y,
-            'A hareng!'
-        );
-
-        $this->shouldThrow(
-            \InvalidArgumentException::class
-        )->duringInstantiation();
+        $this->getOrientation()->get()->shouldBe(self::ORIENTATION);
     }
 }
