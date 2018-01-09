@@ -6,24 +6,12 @@ class LandRover
 {
     const VALID_ORIENTATIONS = ['north', 'east', 'west', 'south'];
 
-    private $x;
-    private $y;
+    private $coordinates;
     private $orientation;
 
     public function __construct($x, $y, $orientation)
     {
-        if (false === is_int($x)) {
-            throw new \InvalidArgumentException(
-                'X coordinate must be an integer'
-            );
-        }
-        $this->x = $x;
-        if (false === is_int($y)) {
-            throw new \InvalidArgumentException(
-                'Y coordinate must be an integer'
-            );
-        }
-        $this->y = $y;
+        $this->coordinates = new Coordinates($x, $y);
         if (false === in_array($orientation, self::VALID_ORIENTATIONS, true)) {
             throw new \InvalidArgumentException(
                 'Orientation must be one of: '
@@ -33,14 +21,9 @@ class LandRover
         $this->orientation = $orientation;
     }
 
-    public function getX(): int
+    public function getCoordinates(): Coordinates
     {
-        return $this->x;
-    }
-
-    public function getY(): int
-    {
-        return $this->y;
+        return $this->coordinates;
     }
 
     public function getOrientation(): string
