@@ -1,0 +1,17 @@
+{
+    "name": "mars-rover/navigation",
+    "license": "MIT",
+    "type": "library",
+    "description": "Mars Rover - Navigation",
+    "autoload": {
+        "psr-4": {
+            "MarsRover\\Navigation\\": "src/MarsRover/Navigation"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "memio/spec-gen": "^0.8.3"
+    }
+}
