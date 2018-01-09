@@ -1,4 +1,9 @@
 suites:
+    event-sourcing:
+        namespace: 'MarsRover\EventSourcing'
+        src_path: packages/event-sourcing/src
+        spec_path: packages/event-sourcing
+
     navigation:
         namespace: 'MarsRover\Navigation'
         src_path: packages/navigation/src

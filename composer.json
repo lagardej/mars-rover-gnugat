@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "mars-rover/event-sourcing": "*@dev",
         "mars-rover/navigation": "*@dev",
         "php": "^7.0"
     },
