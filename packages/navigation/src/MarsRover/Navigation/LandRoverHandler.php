@@ -2,6 +2,11 @@
 
 namespace MarsRover\Navigation;
 
+use MarsRover\EventSourcing\{
+    AnEventHappened,
+    EventStore
+};
+
 class LandRoverHandler
 {
     private $anEventHappened;

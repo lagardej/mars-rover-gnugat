@@ -4,8 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7996b925da7b11275ae3c27913ce59ea",
+    "content-hash": "1e57837b6fcbc3921cd8b5343d75fb87",
     "packages": [
+        {
+            "name": "mars-rover/event-sourcing",
+            "version": "dev-3-event-sourcing",
+            "dist": {
+                "type": "path",
+                "url": "./packages/event-sourcing",
+                "reference": "01c53701971f1170697ad234611491db79b9a0c6",
+                "shasum": null
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "memio/spec-gen": "^0.8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MarsRover\\EventSourcing\\": "src/MarsRover/EventSourcing"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Mars Rover - Event Sourcing"
+        },
         {
             "name": "mars-rover/navigation",
             "version": "dev-1-navigation",
@@ -1058,6 +1084,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mars-rover/event-sourcing": 20,
         "mars-rover/navigation": 20
     },
     "prefer-stable": false,

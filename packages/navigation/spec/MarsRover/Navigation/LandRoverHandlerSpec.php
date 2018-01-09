@@ -2,10 +2,10 @@
 
 namespace spec\MarsRover\Navigation;
 
-use MarsRover\Navigation\AnEventHappened;
-use MarsRover\Navigation\Event;
+use MarsRover\EventSourcing\AnEventHappened;
+use MarsRover\EventSourcing\Event;
 use MarsRover\Navigation\Events;
-use MarsRover\Navigation\EventStore;
+use MarsRover\EventSourcing\EventStore;
 use MarsRover\Navigation\LandRover;
 use MarsRover\Navigation\Orientation;
 use PhpSpec\ObjectBehavior;
