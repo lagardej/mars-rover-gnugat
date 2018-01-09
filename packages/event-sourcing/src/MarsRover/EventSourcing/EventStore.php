@@ -1,6 +1,6 @@
 <?php
 
-namespace MarsRover\Navigation;
+namespace MarsRover\EventSourcing;
 
 interface EventStore
 {
