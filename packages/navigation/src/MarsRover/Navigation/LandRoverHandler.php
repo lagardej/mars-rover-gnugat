@@ -23,10 +23,13 @@ class LandRoverHandler
 
     public function handle(LandRover $landRover)
     {
+        $location = $landRover->getLocation();
+        $coordinates = $location->getCoordinates();
+        $orientation = $location->getOrientation();
         $roverLanded = $this->anEventHappened->justNow(Events::ROVER_LANDED, [
-            'x' => $landRover->getCoordinates()->getX(),
-            'y' => $landRover->getCoordinates()->getY(),
-            'orientation' => $landRover->getOrientation()->get(),
+            'x' => $coordinates->getX(),
+            'y' => $coordinates->getY(),
+            'orientation' => $orientation->get(),
         ]);
         $this->eventStore->log($roverLanded);
     }
