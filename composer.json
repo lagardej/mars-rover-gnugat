@@ -1,0 +1,9 @@
+{
+    "name": "mars-rover/mars-rover",
+    "license": "MIT",
+    "type": "project",
+    "description": "Mars Rover",
+    "require": {
+        "php": "^7.0"
+    }
+}
