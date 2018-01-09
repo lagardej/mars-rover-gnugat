@@ -2,8 +2,10 @@
 
 namespace MarsRover\EventSourcing;
 
-interface AnEventHappened
+class AnEventHappened
 {
-
-    public function justNow($argument1, $argument2);
+    public function justNow(string $name, array $data): Event
+    {
+        return new Event($name, $data, new \DateTime());
+    }
 }
