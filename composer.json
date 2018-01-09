@@ -3,7 +3,17 @@
     "license": "MIT",
     "type": "project",
     "description": "Mars Rover",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/*"
+        }
+    ],
     "require": {
+        "mars-rover/navigation": "*@dev",
         "php": "^7.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^4.3"
     }
 }
