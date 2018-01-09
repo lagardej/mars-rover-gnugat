@@ -1,0 +1,17 @@
+{
+    "name": "mars-rover/geolocation",
+    "license": "MIT",
+    "type": "library",
+    "description": "Mars Rover - Geolocation",
+    "autoload": {
+        "psr-4": {
+            "MarsRover\\Geolocation\\": "src/MarsRover/Geolocation"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "memio/spec-gen": "^0.8.3"
+    }
+}
