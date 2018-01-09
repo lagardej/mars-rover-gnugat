@@ -4,6 +4,11 @@ suites:
         src_path: packages/event-sourcing/src
         spec_path: packages/event-sourcing
 
+    geolocation:
+        namespace: 'MarsRover\Geolocation'
+        src_path: packages/geolocation/src
+        spec_path: packages/geolocation
+
     location:
         namespace: 'MarsRover\Location'
         src_path: packages/location/src
