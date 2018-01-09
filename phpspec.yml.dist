@@ -4,6 +4,11 @@ suites:
         src_path: packages/event-sourcing/src
         spec_path: packages/event-sourcing
 
+    location:
+        namespace: 'MarsRover\Location'
+        src_path: packages/location/src
+        spec_path: packages/location
+
     navigation:
         namespace: 'MarsRover\Navigation'
         src_path: packages/navigation/src
