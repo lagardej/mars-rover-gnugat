@@ -1,0 +1,5 @@
+suites:
+    navigation:
+        namespace: 'MarsRover\Navigation'
+        src_path: packages/navigation/src
+        spec_path: packages/navigation
