@@ -2,6 +2,7 @@
 
 namespace MarsRover\Location;
 
+use MarsRover\Geolocation\Location;
 use MarsRover\Location\Service\FindLatestLocation;
 
 class LocateRoverHandler
@@ -13,7 +14,7 @@ class LocateRoverHandler
         $this->findLatestLocation = $findLatestLocation;
     }
 
-    public function handle()
+    public function handle() : Location
     {
         return $this->findLatestLocation->find();
     }

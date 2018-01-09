@@ -2,6 +2,12 @@
 
 namespace MarsRover\Navigation;
 
+use MarsRover\Geolocation\{
+    Coordinates,
+    Location,
+    Orientation
+};
+
 class LandRover
 {
     private $location;

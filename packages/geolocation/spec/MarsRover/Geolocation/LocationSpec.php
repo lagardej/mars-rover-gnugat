@@ -1,9 +1,9 @@
 <?php
 
-namespace spec\MarsRover\Navigation;
+namespace spec\MarsRover\Geolocation;
 
-use MarsRover\Navigation\Coordinates;
-use MarsRover\Navigation\Orientation;
+use MarsRover\Geolocation\Coordinates;
+use MarsRover\Geolocation\Orientation;
 use PhpSpec\ObjectBehavior;
 
 class LocationSpec extends ObjectBehavior

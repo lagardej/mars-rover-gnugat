@@ -2,8 +2,9 @@
 
 namespace MarsRover\Location\Service;
 
+use MarsRover\Geolocation\Location;
+
 interface FindLatestLocation
 {
-
-    public function find();
+    public function find(): Location;
 }

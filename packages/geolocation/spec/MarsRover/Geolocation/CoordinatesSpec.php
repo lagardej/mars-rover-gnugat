@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\MarsRover\Navigation;
+namespace spec\MarsRover\Geolocation;
 
 use PhpSpec\ObjectBehavior;
 
